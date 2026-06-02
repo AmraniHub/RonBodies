@@ -71,8 +71,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--black);
   letter-spacing: 0.04em;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 .logo span { color: var(--gold); }
+
+/* Logo image */
+.logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+.footer-logo-img {
+  height: 52px;
+  filter: brightness(1.1);
+}
 
 .nav-main { flex: 1; }
 .nav-main ul { display: flex; align-items: center; gap: 4px; }

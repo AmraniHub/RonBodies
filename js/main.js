@@ -1,4 +1,4 @@
-/* ===== RonBodies – Main JS ===== */
+/* ===== Curva Shapewear – Main JS ===== */
 
 // ── Popup ──────────────────────────────────────────
 window.addEventListener('load', () => {
