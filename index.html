@@ -118,8 +118,9 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-slides" id="heroSlides">
-      <div class="hero-slide active" style="background: linear-gradient(135deg, #1a1a1a 0%, #3d2b1f 100%);">
-        <div class="hero-content">
+      <div class="hero-slide active" style="background: url('images/hero/hero-bg.png') center/cover no-repeat; position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
+        <div class="hero-content" style="position:relative;z-index:2;">
           <p class="hero-tag">NEW COLLECTION</p>
           <h1>Sculpt. Shape.<br /><span>Confidence.</span></h1>
           <p class="hero-desc">Premium Colombian compression shapewear designed for every body. Feel and look amazing every day.</p>
@@ -289,20 +290,18 @@
       </div>
       <div class="products-grid" id="productsGrid">
 
-        <div class="product-card" data-category="shorts">
+        <div class="product-card featured-product" data-category="onepiece" onclick="window.location='product.html'" style="cursor:pointer;">
           <div class="product-image">
-            <div class="product-placeholder" style="background: linear-gradient(145deg, #f5e6d3, #e8c9a0);">
-              <span class="product-placeholder-icon">🩳</span>
-            </div>
+            <img src="images/products/powernet-bodysuit.png" alt="مشد باور نت الاحترافي" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
             <div class="product-badges">
               <span class="badge bestseller">Best Seller</span>
               <span class="badge sale">-48%</span>
             </div>
             <div class="product-actions">
-              <button class="wishlist-btn" onclick="toggleWishlist(this)">
+              <button class="wishlist-btn" onclick="event.stopPropagation(); toggleWishlist(this)">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </button>
-              <button class="quick-view-btn" onclick="quickView(0)">Quick View</button>
+              <button class="quick-view-btn" onclick="event.stopPropagation(); window.location='product.html'">View Product</button>
             </div>
           </div>
           <div class="product-info">
@@ -310,18 +309,18 @@
               <span class="stars">★★★★★</span>
               <span class="review-count">(284)</span>
             </div>
-            <h3 class="product-name">Sculpting High Waist Hooks Short</h3>
-            <p class="product-desc">Waist · Tummy · Back · Thighs · Butt</p>
+            <h3 class="product-name">PowerNet Pro Bodyshaper – مشد باور نت</h3>
+            <p class="product-desc">Waist · Tummy · Back · Butt Lift · Full Body</p>
             <div class="product-colors">
               <span class="color-dot" style="background:#1a1a1a" title="Black"></span>
-              <span class="color-dot" style="background:#f5e6d3" title="Nude"></span>
+              <span class="color-dot active" style="background:#f5e6d3" title="Nude"></span>
               <span class="color-dot" style="background:#8b4a6b" title="Burgundy"></span>
             </div>
             <div class="product-price">
-              <span class="price-sale">AED 297</span>
-              <span class="price-original">AED 570</span>
+              <span class="price-sale">AED 259</span>
+              <span class="price-original">AED 499</span>
             </div>
-            <button class="btn-add-cart" onclick="addToCart('Sculpting High Waist Hooks Short', 297)">Add to Cart</button>
+            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('PowerNet Pro Bodyshaper', 259)">Add to Cart</button>
           </div>
         </div>
 

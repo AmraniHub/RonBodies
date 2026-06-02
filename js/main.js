@@ -278,6 +278,16 @@ function showToast(msg) {
   toastTimeout = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
+// ── Make every product card clickable ─────────────
+document.querySelectorAll('.product-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', function (e) {
+    // Don't navigate if clicking a button inside the card
+    if (e.target.closest('button')) return;
+    window.location.href = 'product.html';
+  });
+});
+
 // ── Color Dot Selection ────────────────────────────
 document.querySelectorAll('.color-dot').forEach(dot => {
   dot.addEventListener('click', function() {

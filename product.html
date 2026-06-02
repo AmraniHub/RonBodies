@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مشد باور نت الاحترافي – RonBodies</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="rtl-page">
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <span>🔥 تخفيضات الصيف – خصم يصل إلى 50%</span>
+      <span class="sep">|</span>
+      <span>شحن مجاني للطلبات فوق 200 درهم</span>
+      <span class="sep">|</span>
+      <span>إرجاع مجاني خلال 30 يوم</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo">RON<span>BODIES</span></a>
+      <nav class="nav-main">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="index.html#collections">المجموعات</a></li>
+          <li><a href="index.html#bestsellers">الأكثر مبيعاً</a></li>
+          <li><a href="index.html#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Cart" onclick="toggleCart()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>سلة التسوق (<span id="cartItemCount">0</span>)</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>السلة فارغة</p>
+        <button onclick="toggleCart()">متابعة التسوق</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span>›</span>
+        <a href="index.html#collections">المجموعات</a>
+        <span>›</span>
+        <span>مشد باور نت الاحترافي</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Product Section -->
+  <section class="product-page">
+    <div class="container">
+      <div class="product-layout">
+
+        <!-- Image Gallery -->
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img src="images/products/powernet-bodysuit.png" alt="مشد باور نت الاحترافي" id="mainImage" />
+            <button class="gallery-zoom" onclick="openLightbox()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+            <div class="gallery-badge-wrap">
+              <span class="gallery-badge">الأكثر مبيعاً</span>
+            </div>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="thumb active" onclick="switchImage(this, 'images/products/powernet-bodysuit.png')">
+              <img src="images/products/powernet-bodysuit.png" alt="صورة 1" />
+            </div>
+            <div class="thumb" onclick="switchImage(this, 'images/hero/hero-bg.png')">
+              <img src="images/hero/hero-bg.png" alt="صورة 2" />
+            </div>
+            <div class="thumb" onclick="switchImage(this, 'images/logo/logo.png')">
+              <img src="images/logo/logo.png" alt="الشعار" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-details" id="productDetails">
+
+          <!-- Brand -->
+          <div class="product-brand">CURVA SHAPEWEAR</div>
+
+          <!-- Title -->
+          <h1 class="product-title">مشد "باور نت" الاحترافي</h1>
+          <p class="product-subtitle">مشد الجسم بتقنية الضغط البارد</p>
+
+          <!-- Rating -->
+          <div class="product-meta-row">
+            <div class="product-rating-row">
+              <span class="stars-lg">★★★★★</span>
+              <span class="rating-num">4.9</span>
+              <span class="rating-reviews">(284 تقييم)</span>
+            </div>
+            <span class="stock-badge">✓ متوفر في المخزون</span>
+          </div>
+
+          <!-- Pricing Box -->
+          <div class="pricing-box">
+            <div class="pricing-options">
+              <div class="pricing-option active" id="qty1" onclick="selectQty(1)">
+                <div class="pricing-option-inner">
+                  <div class="pricing-qty-badge">1 قطعة</div>
+                  <div class="pricing-amount">259 ر.س</div>
+                  <div class="pricing-kwd">22 د.ك</div>
+                </div>
+                <div class="pricing-check">✓</div>
+              </div>
+              <div class="pricing-option" id="qty2" onclick="selectQty(2)">
+                <div class="pricing-hot">🔥 الأوفر</div>
+                <div class="pricing-option-inner">
+                  <div class="pricing-qty-badge">2 قطعة</div>
+                  <div class="pricing-amount">459 ر.س</div>
+                  <div class="pricing-kwd">42 د.ك</div>
+                </div>
+                <div class="pricing-save">وفري 59 ر.س</div>
+                <div class="pricing-check">✓</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="size-section">
+            <div class="size-header">
+              <span class="size-label">المقاس</span>
+              <button class="size-guide-btn" onclick="toggleSizeGuide()">دليل المقاسات</button>
+            </div>
+            <div class="size-grid">
+              <button class="sz-btn" onclick="selectSz(this)">S</button>
+              <button class="sz-btn" onclick="selectSz(this)">M</button>
+              <button class="sz-btn" onclick="selectSz(this)">L</button>
+              <button class="sz-btn" onclick="selectSz(this)">XL</button>
+              <button class="sz-btn" onclick="selectSz(this)">2XL</button>
+              <button class="sz-btn" onclick="selectSz(this)">3XL</button>
+              <button class="sz-btn" onclick="selectSz(this)">4XL</button>
+            </div>
+            <!-- Size Guide Popup -->
+            <div class="size-guide-table" id="sizeGuideTable">
+              <table>
+                <thead><tr><th>المقاس</th><th>الخصر (سم)</th><th>الوركين (سم)</th><th>الوزن (كغ)</th></tr></thead>
+                <tbody>
+                  <tr><td>S</td><td>60–65</td><td>86–90</td><td>50–60</td></tr>
+                  <tr><td>M</td><td>66–72</td><td>91–96</td><td>61–70</td></tr>
+                  <tr><td>L</td><td>73–80</td><td>97–103</td><td>71–80</td></tr>
+                  <tr><td>XL</td><td>81–88</td><td>104–110</td><td>81–93</td></tr>
+                  <tr><td>2XL</td><td>89–96</td><td>111–118</td><td>94–105</td></tr>
+                  <tr><td>3XL</td><td>97–105</td><td>119–127</td><td>106–120</td></tr>
+                  <tr><td>4XL</td><td>106–115</td><td>128–136</td><td>121–135</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Color -->
+          <div class="color-section">
+            <span class="size-label">اللون: <strong id="colorName">بيج (نود)</strong></span>
+            <div class="color-row">
+              <button class="color-swatch active" style="background:#f5e6d3; border-color: var(--gold);" onclick="selectColor(this, 'بيج (نود)')"></button>
+              <button class="color-swatch" style="background:#1a1a1a;" onclick="selectColor(this, 'أسود')"></button>
+              <button class="color-swatch" style="background:#8b4a6b;" onclick="selectColor(this, 'بردقاني')"></button>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="cta-buttons">
+            <button class="btn-atc" id="atcBtn" onclick="handleAddToCart()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              أضف إلى السلة
+            </button>
+            <button class="btn-buynow" onclick="handleBuyNow()">اشتري الآن</button>
+          </div>
+
+          <!-- Trust Mini Badges -->
+          <div class="trust-mini">
+            <div class="trust-mini-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              دفع آمن 100%
+            </div>
+            <div class="trust-mini-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              توصيل سريع 2-4 أيام
+            </div>
+            <div class="trust-mini-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              إرجاع مجاني 30 يوم
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Product Tabs -->
+      <div class="product-tabs">
+        <div class="tabs-nav">
+          <button class="tab-btn active" onclick="switchTab(this, 'desc')">الوصف</button>
+          <button class="tab-btn" onclick="switchTab(this, 'features')">المميزات</button>
+          <button class="tab-btn" onclick="switchTab(this, 'reviews')">التقييمات (284)</button>
+          <button class="tab-btn" onclick="switchTab(this, 'shipping')">الشحن والإرجاع</button>
+        </div>
+
+        <!-- Description Tab -->
+        <div class="tab-panel active" id="tab-desc">
+          <div class="tab-content-inner">
+            <h3>مشد "باور نت" الاحترافي – ضغط عالٍ بلمسة ناعمة وتقنية تبريد</h3>
+            <p>اختبري التوازن المثالي بين القوة والراحة مع مشد "باور نت". مصنوع من مزيج احترافي من <strong>Nylon (نايلون)</strong> و<strong>Spandex (إيلاستان)</strong>، ليمنحك دعماً قوياً مع ملمس لين ومرن ينساب مع الجسم دون أي إزعاج.</p>
+            <p>تركيبة القماش (Nylon + Spandex) تجعل المشد متيناً، مرناً، سهل العناية، ويحافظ على شكله وجودته حتى مع الاستخدام المتكرر، مع إحساس ناعم ومريح على البشرة.</p>
+            <div class="product-specs">
+              <div class="spec-row"><span>المادة</span><span>Nylon + Spandex</span></div>
+              <div class="spec-row"><span>الضغط</span><span>عالٍ – طبقة مزدوجة</span></div>
+              <div class="spec-row"><span>الإغلاق</span><span>سحاب جانبي + مشابك</span></div>
+              <div class="spec-row"><span>الأسلاك</span><span>حمالات قابلة للإزالة</span></div>
+              <div class="spec-row"><span>المقاسات</span><span>S / M / L / XL / 2XL / 3XL / 4XL</span></div>
+              <div class="spec-row"><span>الألوان</span><span>بيج (نود) / أسود / بردقاني</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Tab -->
+        <div class="tab-panel" id="tab-features">
+          <div class="tab-content-inner">
+            <div class="features-grid">
+              <div class="feature-item-card">
+                <div class="feat-icon">💪</div>
+                <h4>دعم الضغط المزدوج</h4>
+                <p>نسيج "باور نت" مزدوج الطبقات يوفر شدّاً فعالاً لمنطقة البطن والخصر مع مرونة مريحة.</p>
+              </div>
+              <div class="feature-item-card">
+                <div class="feat-icon">🧵</div>
+                <h4>تركيبة مرنة وناعمة</h4>
+                <p>مزيج Nylon + Spandex يمنح القماش قوة تحمل عالية مع نعومة فائقة وتمدد مثالي.</p>
+              </div>
+              <div class="feature-item-card">
+                <div class="feat-icon">☀️</div>
+                <h4>راحة طوال اليوم</h4>
+                <p>القماش خفيف، لين، ولا يسبب تهيجاً حتى مع الاستخدام الطويل.</p>
+              </div>
+              <div class="feature-item-card">
+                <div class="feat-icon">❄️</div>
+                <h4>مواد مبردة فاخرة</h4>
+                <p>بطانة داخلية تسمح بمرور الهواء وتحافظ على برودة البشرة طوال اليوم.</p>
+              </div>
+              <div class="feature-item-card">
+                <div class="feat-icon">👁️</div>
+                <h4>تصميم خفي وقابل للتعديل</h4>
+                <p>سحاب جانبي ومشابك لضبط المقاس بدقة ومظهر غير مرئي تحت الملابس.</p>
+              </div>
+              <div class="feature-item-card">
+                <div class="feat-icon">🔒</div>
+                <h4>راحة عملية</h4>
+                <p>سحاب سفلي ودانتيل بسيليكون يمنع الانزلاق أو الالتفاف أثناء الحركة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div class="tab-panel" id="tab-reviews">
+          <div class="tab-content-inner">
+            <div class="reviews-summary">
+              <div class="reviews-score">
+                <span class="big-score">4.9</span>
+                <div class="big-stars-row">★★★★★</div>
+                <span>284 تقييم</span>
+              </div>
+              <div class="reviews-bars">
+                <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div><span>88%</span></div>
+                <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div><span>9%</span></div>
+                <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span>2%</span></div>
+                <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+                <div class="bar-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span>0%</span></div>
+              </div>
+            </div>
+            <div class="reviews-list">
+              <div class="review-item">
+                <div class="ri-header">
+                  <div class="ri-avatar">س</div>
+                  <div>
+                    <strong>سارة م.</strong>
+                    <span class="ri-stars">★★★★★</span>
+                  </div>
+                  <span class="ri-date">15 مايو 2026</span>
+                </div>
+                <p>"جودة استثنائية! الضغط مثالي والقماش ناعم جداً. لاحظت الفرق من أول استخدام. التوصيل كان سريع جداً."</p>
+                <span class="ri-verified">✓ مشترٍ موثق</span>
+              </div>
+              <div class="review-item">
+                <div class="ri-header">
+                  <div class="ri-avatar">ف</div>
+                  <div>
+                    <strong>فاطمة ع.</strong>
+                    <span class="ri-stars">★★★★★</span>
+                  </div>
+                  <span class="ri-date">3 مايو 2026</span>
+                </div>
+                <p>"أفضل مشد جربته في حياتي! مريح، لا يسبب أي إزعاج حتى بعد ساعات طويلة. اشتريت قطعتين واستفدت من العرض."</p>
+                <span class="ri-verified">✓ مشترٍ موثق</span>
+              </div>
+              <div class="review-item">
+                <div class="ri-header">
+                  <div class="ri-avatar">ل</div>
+                  <div>
+                    <strong>لينا ك.</strong>
+                    <span class="ri-stars">★★★★★</span>
+                  </div>
+                  <span class="ri-date">28 أبريل 2026</span>
+                </div>
+                <p>"المقاس دقيق جداً وخدمة العملاء ممتازة. أنصح به بشدة لكل من تبحث عن مشد احترافي وفعال."</p>
+                <span class="ri-verified">✓ مشترٍ موثق</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping Tab -->
+        <div class="tab-panel" id="tab-shipping">
+          <div class="tab-content-inner">
+            <div class="shipping-grid">
+              <div class="shipping-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <h4>التوصيل داخل الإمارات</h4>
+                <p>2-4 أيام عمل. شحن مجاني على الطلبات فوق 200 درهم.</p>
+              </div>
+              <div class="shipping-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <h4>الشحن السريع</h4>
+                <p>1-2 أيام عمل. متاح عند إتمام الطلب بتكلفة إضافية.</p>
+              </div>
+              <div class="shipping-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                <h4>سياسة الإرجاع</h4>
+                <p>30 يوماً للإرجاع والتبديل على المنتجات غير المستخدمة في عبوتها الأصلية.</p>
+              </div>
+              <div class="shipping-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+                <h4>دعم العملاء</h4>
+                <p>فريق دعم متاح 24/7 عبر واتساب أو البريد الإلكتروني لمساعدتك.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
+  <!-- Related Products -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">قد يعجبكِ أيضاً</p>
+        <h2 class="section-title">منتجات مشابهة</h2>
+      </div>
+      <div class="products-grid related-grid">
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <div class="product-placeholder" style="background: linear-gradient(145deg, #f5e6d3, #e8c9a0);">
+              <span class="product-placeholder-icon">🩳</span>
+            </div>
+            <div class="product-badges"><span class="badge bestseller">الأكثر مبيعاً</span></div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="review-count">(284)</span></div>
+            <h3 class="product-name">مشد الخصر العالي مع خطاف</h3>
+            <div class="product-price"><span class="price-sale">297 درهم</span><span class="price-original">570 درهم</span></div>
+            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('مشد الخصر العالي مع خطاف', 297)">أضف للسلة</button>
+          </div>
+        </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <div class="product-placeholder" style="background: linear-gradient(145deg, #f0d5e8, #e0a8c8);">
+              <span class="product-placeholder-icon">⏳</span>
+            </div>
+            <div class="product-badges"><span class="badge sale">-40%</span></div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="review-count">(312)</span></div>
+            <h3 class="product-name">حزام خصر لاتكس احترافي</h3>
+            <div class="product-price"><span class="price-sale">189 درهم</span><span class="price-original">315 درهم</span></div>
+            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('حزام خصر لاتكس احترافي', 189)">أضف للسلة</button>
+          </div>
+        </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <div class="product-placeholder" style="background: linear-gradient(145deg, #d5f0e8, #a8e0c8);">
+              <span class="product-placeholder-icon">💪</span>
+            </div>
+            <div class="product-badges"><span class="badge sale">-50%</span></div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="review-count">(201)</span></div>
+            <h3 class="product-name">بدلة تشكيل الجسم الكاملة 360°</h3>
+            <div class="product-price"><span class="price-sale">399 درهم</span><span class="price-original">798 درهم</span></div>
+            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('بدلة تشكيل الجسم الكاملة 360°', 399)">أضف للسلة</button>
+          </div>
+        </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <div class="product-placeholder" style="background: linear-gradient(145deg, #e8d5f0, #c9a8e0);">
+              <span class="product-placeholder-icon">👗</span>
+            </div>
+            <div class="product-badges"><span class="badge new">جديد</span></div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="review-count">(89)</span></div>
+            <h3 class="product-name">بودي سوت كامل التحكم</h3>
+            <div class="product-price"><span class="price-sale">349 درهم</span><span class="price-original">650 درهم</span></div>
+            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('بودي سوت كامل التحكم', 349)">أضف للسلة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a class="whatsapp-float" href="https://wa.me/971585250000" target="_blank" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
